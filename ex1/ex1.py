@@ -3,7 +3,10 @@ import sys
 
 def main():
 	i = 4
-	value = int(sys.argv[1])
+	lines = []
+	for line in sys.stdin:
+		lines.append(line.rstrip('\n'))
+	value = int(lines[0])
 	while i > 0:
 		i = i - 1
 		if value % 3 == 0:
